@@ -1,25 +1,24 @@
 ## My Favorite Sandwich
-
-1.take out bread, turkey, mayo, spinach, tomato and knife
-2. open bread bag
-3. take out 2 slices of bread
-4. close bag.
-5. open turkey bag
-6. take out 5 slices of turkey
-7. place 5 peices of turkey on 1 slice of bread
-8. close turkey bag
-9. open bag of spinach
-10. grab small handful of spinach
-11. place spinach on top of turkey
-12. close bag of spinach
-13. grab knife and tomato
-14. cut 2 slices of tomato
-15. place 2 slices of tomato on top of spinach
-16.set tomato aside
-17. open jar of mayo
-18. use knife to scoop 1 tablspoon of mayo on the remaining slice of bread
-19. close jar of mayo
-20. place slice of bread on top of the other with the mayo facing the tomato,spinach and turkey
-21. put knife in sink
-22. put away bread,turkey, spinach,mayo and tomato
-23. consume the sandwich
+-1.take out bread, turkey, mayo, spinach, tomato and knife
+-2. open bread bag
+-3. take out 2 slices of bread
+-4. close bag.
+-5. open turkey bag
+-6. take out 5 slices of turkey
+-7. place 5 peices of turkey on 1 slice of bread
+-8. close turkey bag
+-9. open bag of spinach
+-10. grab small handful of spinach
+-11. place spinach on top of turkey
+-12. close bag of spinach
+-13. grab knife and tomato
+-14. cut 2 slices of tomato
+-15. place 2 slices of tomato on top of spinach
+-16.set tomato aside
+-17. open jar of mayo
+-18. use knife to scoop 1 tablspoon of mayo on the remaining slice of bread
+-19. close jar of mayo
+-20. place slice of bread on top of the other with the mayo facing the tomato,spinach and turkey
+-21. put knife in sink
+-22. put away bread,turkey, spinach,mayo and tomato
+-23. consume the sandwich
