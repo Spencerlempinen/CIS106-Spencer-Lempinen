@@ -1,2 +1,2 @@
-name = "Spencer!"
-print("Hello " + name)
+# This program displays "Hello world!"
+print("Hello world!")
