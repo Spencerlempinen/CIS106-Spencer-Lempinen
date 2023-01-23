@@ -4,14 +4,16 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="spons"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2023-01-23 12:12:00 PM"/>
+        <attribute name="saved" value="2023-01-23 12:22:38 PM"/>
         <attribute name="created" value="c3BvbnM7RE9OQ09NOzIwMjMtMDEtMjM7MTE6NTc6MjkgQU07MjI3OA=="/>
-        <attribute name="edited" value="c3BvbnM7RE9OQ09NOzIwMjMtMDEtMjM7MTI6MTI6MDAgUE07MjsyMzgz"/>
+        <attribute name="edited" value="c3BvbnM7RE9OQ09NOzIwMjMtMDEtMjM7MTI6MjI6MzggUE07NDsyMzk3"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <output expression="&quot;Hello Spencer!&quot;" newline="True"/>
+            <declare name="word" type="String" array="False" size=""/>
+            <assign variable="word" expression="&quot;World!&quot;"/>
+            <output expression="&quot;Hello &quot; &amp; word" newline="True"/>
         </body>
     </function>
 </flowgorithm>
