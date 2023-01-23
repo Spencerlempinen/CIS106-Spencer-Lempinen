@@ -6,3 +6,4 @@ I am attending harper to earn my associate in science (Comp Sci). I was encourag
 
 ## Assignment 2
 
+Through Reading Chapter 1 I was intrigued by Python mainly due to Its Readability. through some other research online it seems that python has a very clean syntax and is fairly readable compared to other languages. I tried Visual Studio by Microsoft and Pycharm by Jetbrains. I believe Pycharm is going to be my IDE of choice. Its user interface seems friendly and I found it to be less intimidating than visual studio's. Jetbrains Pycharm also has a autocomplete syntax feature which seems to help me avoid errors and in the future, it could help save time.
