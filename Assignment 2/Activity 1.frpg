@@ -1,1 +1,18 @@
 
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="spons"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-23 12:00:33 PM"/>
+        <attribute name="created" value="c3BvbnM7RE9OQ09NOzIwMjMtMDEtMjM7MTE6NTc6MjkgQU07MjI3OA=="/>
+        <attribute name="edited" value="c3BvbnM7RE9OQ09NOzIwMjMtMDEtMjM7MTI6MDA6MzMgUE07MTsyMzg1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Hello world!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
