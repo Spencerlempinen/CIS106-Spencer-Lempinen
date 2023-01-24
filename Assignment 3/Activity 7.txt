@@ -1,8 +1,11 @@
 This program converts input dog age in human years to dog age in dog years.
+
 Input:
     Display prompt
     Get dog name and age in human years
+
 Process:
     Convert dog age in human years to dog age in dog year's
+
 Output:
     Display dog name and age in dog years
