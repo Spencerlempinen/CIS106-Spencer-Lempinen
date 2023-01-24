@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="spons"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-24 12:03:19 PM"/>
+        <attribute name="created" value="c3BvbnM7RE9OQ09NOzIwMjMtMDEtMjQ7MTE6Mjg6MjQgQU07MjI3Mg=="/>
+        <attribute name="edited" value="c3BvbnM7RE9OQ09NOzIwMjMtMDEtMjQ7MTI6MDM6MTkgUE07MjsyMzk0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This program Converts a dogs age in &quot;human years&quot; to a dogs age in &quot;dog years&quot;"/>
+            <declare name="age" type="Integer" array="False" size=""/>
+            <declare name="name" type="String" array="False" size=""/>
+            <output expression="&quot;what is your dogs name and age?&quot;" newline="True"/>
+            <input variable="name"/>
+            <input variable="age"/>
+            <assign variable="age" expression="(age*7)"/>
+            <output expression="name &amp;&quot; is &quot; &amp; age&amp;&quot; dog years old!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
