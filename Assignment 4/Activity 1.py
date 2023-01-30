@@ -1,6 +1,7 @@
 #This program will take hours worked per week and rate of pay and calculate weekly,monthly, and annual pay
 #References:
 #https://www.youtube.com/watch?v=1BB1sCkS9oU
+
 print("Enter hours wokred per week:")
 Hours_worked_per_week=float(input())
 print("Enter rate per hour")
