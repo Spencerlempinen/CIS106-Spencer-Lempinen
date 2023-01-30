@@ -1,1 +1,12 @@
+This program will take hours worked per week and rate of pay and calculate weekly,monthly, and annual pay
 
+Input:
+    Display prompt
+    
+    Get hours wokred per week and rate of pay
+
+Process:
+    Calculate weekly,monthly, and annual pay
+
+Output:
+    Display weekly,monthly, and annual pay
