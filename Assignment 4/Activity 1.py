@@ -12,7 +12,7 @@ rate_per_hour = float(input())
 
 weekly_pay = hours_worked_per_week * rate_per_hour
 monthly_pay = weekly_pay * 4
-annual_pay = monthly_pay * 12
+annual_pay = weekly_pay * 52
 
 print("$" + str(weekly_pay) + " per week")
 print("$" + str(monthly_pay) + " per month")
