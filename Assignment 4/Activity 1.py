@@ -2,9 +2,9 @@
 #References:
 #https://www.youtube.com/watch?v=1BB1sCkS9oU
 print("Enter hours wokred per week:")
-Hours_worked_per_week=int(input())
+Hours_worked_per_week=float(input())
 print("Enter rate per hour")
-Rate_per_hour=int(input())
+Rate_per_hour=float(input())
 Weekly_pay=Hours_worked_per_week*Rate_per_hour
 Monthly_pay=Weekly_pay*4
 Annual_pay=Monthly_pay*12
