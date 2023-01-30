@@ -11,3 +11,7 @@ Through Reading Chapter 1 I was intrigued by Python mainly due to Its Readabilit
 ## Assignment 3
 
 Upon completion of Activity 7, which entailed converting a dog's age in "human years" to the equivalent in "dog years," I gained a significant understanding of several key concepts. One of the key takeaways was the importance of adhering to the correct order of operations when constructing a program. Initially, I encountered several errors in my flowchart due to improper declaration and assignment of variables. Additionally, I learned the significance of proper formatting for output, as a lack of attention in this area can lead to spacing errors for end-users. The successful completion of the program filled me with a sense of accomplishment and an eagerness to tackle more complex projects, such as utilizing "if" statements. Overall, this was a very fun activity.
+
+## Assignment 4
+
+I learned several concepts from this activity. I gained more experience using input/output operators. I also became more familiar with storing values as floats and as integers. after realizing that my program would not run if someone were to put a decimal as an input i realized i need to go back and store the inputs as floats and not integers. Finally one of the most important things i learned from doing this assignment was using logic anf control flow. getting a better grasp on those two concepts really helped me understand what things to tackle first and how to proceed in a logical manner.
