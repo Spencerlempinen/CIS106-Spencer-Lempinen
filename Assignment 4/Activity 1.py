@@ -4,16 +4,16 @@
 
 print("Enter hours wokred per week:")
 
-Hours_worked_per_week = float(input())
+hours_worked_per_week = float(input())
 
 print("Enter rate per hour")
 
-Rate_per_hour = float(input())
+rate_per_hour = float(input())
 
-Weekly_pay = Hours_worked_per_week * Rate_per_hour
-Monthly_pay = Weekly_pay * 4
-Annual_pay = Monthly_pay * 12
+weekly_pay = hours_worked_per_week * rate_per_hour
+monthly_pay = weekly_pay * 4
+annual_pay = monthly_pay * 12
 
-print("$" + str(Weekly_pay) + " per week")
-print("$" + str(Monthly_pay) + " per month")
-print("$" + str(Annual_pay) + " annually")
+print("$" + str(weekly_pay) + " per week")
+print("$" + str(monthly_pay) + " per month")
+print("$" + str(annual_pay) + " annually")
