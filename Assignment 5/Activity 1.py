@@ -1,17 +1,28 @@
-def calculate_pay(hours,rate):
-    weekly_pay = hours * rate
-    monthly_pay = weekly_pay * 4 
-    annual_pay = weekly_pay * 52 
-    return weekly_pay, monthly_pay, annual_pay
+def calculateAnnualPay(wP):
+    annualPay = wP * 52
+    
+    return annualPay
 
+def calculateMonthlyPay(wP):
+    monthlyPay = wP * 4
+    
+    return monthlyPay
+
+def calculateWeeklyPay(hours, rate):
+    weeklyPay = rate * hours
+    
+    return weeklyPay
+
+# Main
 print("Enter hours worked per week: ")
-hours = float(input())
-
+hours = int(input())
 print("Enter rate of pay: ")
-rate = float(input())
+rate = int(input())
+wP = calculateWeeklyPay(hours, rate)
+print("$" + str(wP) + " per week")
+mP = calculateMonthlyPay(wP)
+print("$" + str(mP) + " per month")
+aP = calculateAnnualPay(wP)
+print("$" + str(aP) + " annually")
 
-weekly_pay, monthly_pay, annual_pay = calculate_pay(hours,rate)
 
-print(weekly_pay)
-print(monthly_pay)
-print(annual_pay)
