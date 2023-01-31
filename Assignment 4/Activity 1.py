@@ -3,11 +3,9 @@
 # https://www.youtube.com/watch?v=1BB1sCkS9oU
 
 print("Enter hours wokred per week:")
-
 hours_worked_per_week = float(input())
 
 print("Enter rate per hour")
-
 rate_per_hour = float(input())
 
 weekly_pay = hours_worked_per_week * rate_per_hour
