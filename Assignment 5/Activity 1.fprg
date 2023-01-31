@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="spons"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-31 02:33:15 PM"/>
+        <attribute name="created" value="c3BvbnM7RE9OQ09NOzIwMjMtMDEtMzE7MTI6MTE6NDQgUE07MjI4MA=="/>
+        <attribute name="edited" value="c3BvbnM7RE9OQ09NOzIwMjMtMDEtMzE7MDI6MzM6MTUgUE07MjsyMzkw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="WP" type="Integer" array="False" size=""/>
+            <declare name="MP" type="Integer" array="False" size=""/>
+            <declare name="AP" type="Integer" array="False" size=""/>
+            <declare name="hours" type="Integer" array="False" size=""/>
+            <declare name="rate" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter hours worked per week: &quot;" newline="True"/>
+            <input variable="hours"/>
+            <output expression="&quot;Enter rate of pay: &quot;" newline="True"/>
+            <input variable="rate"/>
+            <assign variable="WP" expression="CalculatePay(hours,rate)"/>
+            <output expression="WP" newline="True"/>
+            <assign variable="MP" expression="CalculatePay(hours,rate)"/>
+            <output expression="MP" newline="True"/>
+            <assign variable="AP" expression="CalculatePay(hours,rate)"/>
+            <output expression="AP" newline="True"/>
+        </body>
+    </function>
+    <function name="CalculatePay" type="Integer" variable="WeeklyPay,MonthlyPay,AnnualPay">
+        <parameters>
+            <parameter name="hours" type="Integer" array="False"/>
+            <parameter name="rate" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="WeeklyPay" type="Integer" array="False" size=""/>
+            <assign variable="WeeklyPay" expression="rate*hours"/>
+            <declare name="MonthlyPay" type="Integer" array="False" size=""/>
+            <assign variable="MonthlyPay" expression="WeeklyPay*4"/>
+            <declare name="AnnualPay" type="Integer" array="False" size=""/>
+            <assign variable="AnnualPay" expression="WeeklyPay*52"/>
+        </body>
+    </function>
+</flowgorithm>
