@@ -3,10 +3,16 @@ This program will take hours worked per week and rate of pay and calculate weekl
 Input:
     Display prompt
     
-    Get hours wokred per week and rate of pay
+    Get hours wokred per week
+    
+    Get rate of pay
 
 Process:
-    Calculate weekly,monthly, and annual pay
+    Calculate weekly pay by multiplying hours worked per week and rate of pay
+    
+    Calculate monthly pay by multiplying weekly pay by 4
+    
+    Calculate annual pay by multiplying weekly pay by 52
 
 Output:
     Display weekly,monthly, and annual pay
