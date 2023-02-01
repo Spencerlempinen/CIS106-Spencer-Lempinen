@@ -1,1 +1,63 @@
+This program converts an input Fahrenheit temperature to Celsius.
 
+Main Program
+    Get Rate
+    Get Hours
+    Calculate Weekly Income
+    Calculate Monthly Income
+    Calculate Annual Income
+    Display Result
+
+Get Hours
+    Parameters:
+        None
+    Process:
+        Display Prompt
+        Get Hours wokred per week
+    Return Value:
+        Hours worked per week
+        
+Get Rate
+    Parameters:
+        None
+    Process:
+        Display Prompt
+        Get Rate of pay
+    Return Value:
+        Rate of pay
+
+Calculate Weekly pay
+    Parameters:
+        Hours and Rate
+    Process:
+        Calculates weekly pay from Hours*rate
+    Return Value:
+        Weekly Pay
+        
+Calculate Monthly Pay
+    Parameters:
+        Weekly Pay
+    Process:
+        Multiplies weekly pay by 4 to get monthly pay
+    Return Value:
+        Monthly Pay
+        
+Calculate Annual Pay
+    Parameters:
+        Weekly Pay
+    Process:
+        Multiplies weekly pay by 52 for annual pay
+    Return Value:
+        Annual Pay
+
+Display Result
+    Parameters:
+        Weekly Pay
+        Monthly Pay
+        Annual Pay
+    Process:
+        Display Weekly Pay
+        Display Monthly Pay
+        Display Annual Pay
+    Return Value:
+        None
