@@ -13,16 +13,28 @@ def calculateWeeklyPay(hours, rate):
     
     return weeklyPay
 
+def displayResults(weeklyPay, monthlyPay, annualPay):
+    print("$" + str(weeklyPay) + " Per week")
+    print("$" + str(monthlyPay) + " Per month")
+    print("$" + str(annualPay) + " Annually")
+
+def getHours():
+    print("Enter hours worked: ")
+    localHours = float(input())
+    
+    return localHours
+
+def getRate():
+    print("Enter rate per hour: ")
+    rate = float(input())
+    
+    return rate
+
 # Main
-hours = float(input("Enter the number of hours worked per week: "))
-rate = float(input("Enter the rate per hour: "))
-
-wP = calculateWeeklyPay(hours, rate)
-print("$" + str(wP) + " per week")
-
-mP = calculateMonthlyPay(wP)
-print("$" + str(mP) + " per month")
-
-aP = calculateAnnualPay(wP)
-print("$" + str(aP) + " annually")
-
+# This Program Will calculate Weekly,Monthly,and Annual Pay.
+hours = getHours()
+rate = getRate()
+weeklyPay = calculateWeeklyPay(hours, rate)
+monthlyPay = calculateMonthlyPay(weeklyPay)
+annualPay = calculateAnnualPay(weeklyPay)
+displayResults(weeklyPay, monthlyPay, annualPay)
