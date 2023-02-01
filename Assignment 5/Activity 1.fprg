@@ -1,32 +1,28 @@
-
 <?xml version="1.0"?>
 <flowgorithm fileversion="3.0">
     <attributes>
         <attribute name="name" value=""/>
         <attribute name="authors" value="spons"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2023-01-31 03:09:27 PM"/>
+        <attribute name="saved" value="2023-02-01 02:58:45 PM"/>
         <attribute name="created" value="c3BvbnM7RE9OQ09NOzIwMjMtMDEtMzE7MTI6MTE6NDQgUE07MjI4MA=="/>
-        <attribute name="edited" value="c3BvbnM7RE9OQ09NOzIwMjMtMDEtMzE7MDM6MDk6MjcgUE07MzsyMzk4"/>
+        <attribute name="edited" value="c3BvbnM7RE9OQ09NOzIwMjMtMDItMDE7MDI6NTg6NDUgUE07NTsyNDAx"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="AP" type="Integer" array="False" size=""/>
-            <declare name="MP" type="Integer" array="False" size=""/>
-            <declare name="WP" type="Integer" array="False" size=""/>
-            <declare name="hours" type="Integer" array="False" size=""/>
-            <declare name="rate" type="Integer" array="False" size=""/>
-            <output expression="&quot;Enter hours worked per week: &quot;" newline="True"/>
-            <input variable="hours"/>
-            <output expression="&quot;Enter rate of pay: &quot;" newline="True"/>
-            <input variable="rate"/>
-            <assign variable="WP" expression="CalculateWeeklyPay(hours,rate)"/>
-            <output expression="&quot;$&quot;&amp;WP&amp;&quot; per week&quot;" newline="True"/>
-            <assign variable="MP" expression="CalculateMonthlyPay(WP)"/>
-            <output expression="&quot;$&quot;&amp;MP&amp;&quot; per month&quot;" newline="True"/>
-            <assign variable="AP" expression="CalculateAnnualPay(WP)"/>
-            <output expression="&quot;$&quot;&amp;AP&amp;&quot; annually&quot;" newline="True"/>
+            <comment text="This Program Will calculate Weekly,Monthly,and Annual Pay."/>
+            <declare name="AnnualPay" type="Integer" array="False" size=""/>
+            <declare name="MonthlyPay" type="Integer" array="False" size=""/>
+            <declare name="WeeklyPay" type="Integer" array="False" size=""/>
+            <declare name="hours" type="Real" array="False" size=""/>
+            <declare name="rate" type="Real" array="False" size=""/>
+            <assign variable="hours" expression="GetHours()"/>
+            <assign variable="rate" expression="GetRate()"/>
+            <assign variable="WeeklyPay" expression="CalculateWeeklyPay(hours,rate)"/>
+            <assign variable="MonthlyPay" expression="CalculateMonthlyPay(WeeklyPay)"/>
+            <assign variable="AnnualPay" expression="CalculateAnnualPay(WeeklyPay)"/>
+            <call expression="DisplayResults(WeeklyPay,MonthlyPay,AnnualPay)"/>
         </body>
     </function>
     <function name="CalculateAnnualPay" type="Integer" variable="AnnualPay">
@@ -55,6 +51,34 @@
         <body>
             <declare name="WeeklyPay" type="Integer" array="False" size=""/>
             <assign variable="WeeklyPay" expression="rate*hours"/>
+        </body>
+    </function>
+    <function name="DisplayResults" type="None" variable="">
+        <parameters>
+            <parameter name="WeeklyPay" type="Integer" array="False"/>
+            <parameter name="MonthlyPay" type="Integer" array="False"/>
+            <parameter name="AnnualPay" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;$&quot;&amp;WeeklyPay&amp;&quot; Per week&quot;" newline="True"/>
+            <output expression="&quot;$&quot;&amp;MonthlyPay&amp;&quot; Per month&quot;" newline="True"/>
+            <output expression="&quot;$&quot;&amp;AnnualPay&amp;&quot; Annually&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="GetHours" type="Real" variable="LocalHours">
+        <parameters/>
+        <body>
+            <declare name="LocalHours" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter hours worked: &quot;" newline="True"/>
+            <input variable="LocalHours"/>
+        </body>
+    </function>
+    <function name="GetRate" type="Real" variable="rate">
+        <parameters/>
+        <body>
+            <declare name="rate" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter rate per hour: &quot;" newline="True"/>
+            <input variable="rate"/>
         </body>
     </function>
 </flowgorithm>
