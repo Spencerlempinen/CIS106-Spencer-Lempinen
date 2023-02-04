@@ -6,7 +6,7 @@ import test
 def test_assignment_11_folder_structure():
     test.check_assignment_folder_structure(
         "Assignment 11",
-        r"(defined|fixed) activity[ _]?#?\d\.(class|cs|java|js|lua|py|txt)|"
+        r"activity[ _]?#?\d\.(class|cs|java|js|lua|py|txt)|"
         "package-lock.json|test.csproj")
 
 
@@ -141,7 +141,7 @@ def test_assignment_11_defined_activity_1_output():
         "Assignment 11",
         "Activity 1",
         "",
-        "2020\n0\n",
+        "2020\n0\n1\n",
         r"Error|Invalid|Unknown",
         "output is incorrect. Expected:\n"
             "Error: 0 is not a valid month")
@@ -150,7 +150,7 @@ def test_assignment_11_defined_activity_1_output():
         "Assignment 11",
         "Activity 1",
         "",
-        "2020\n13\n",
+        "2020\n13\n12\n",
         r"Error|Invalid|Unknown",
         "output is incorrect. Expected:\n"
             "Error: 13 is not a valid month")
