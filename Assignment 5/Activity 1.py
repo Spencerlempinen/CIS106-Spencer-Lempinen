@@ -1,4 +1,3 @@
-
 def calculateAnnualPay(wP):
     annualPay = wP * 52
     
@@ -28,14 +27,15 @@ def getHours():
 def getRate():
     print("Enter rate per hour: ")
     rate = float(input())
-
+    
     return rate
 
 # Main
-# This program will calculate someones age in months, days, hours, seconds.
-years = Get_Age()
-AgeMonths = Calculate_Age_Months(years)
-AgeDays = Calculate_Age_Days(years) 
-AgeHours = Calculate_Age_Hours(AgeDays)
-AgeSeconds = Calculate_Age_Seconds(AgeHours)
-Display_Results(AgeMonths, AgeDays, AgeHours, AgeSeconds)
+# This Program Will calculate Weekly,Monthly,and Annual Pay.
+hours = getHours()
+rate = getRate()
+weeklyPay = calculateWeeklyPay(hours, rate)
+monthlyPay = calculateMonthlyPay(weeklyPay)
+annualPay = calculateAnnualPay(weeklyPay)
+displayResults(weeklyPay, monthlyPay, annualPay)
+
