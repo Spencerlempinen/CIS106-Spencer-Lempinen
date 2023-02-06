@@ -1,3 +1,6 @@
+# This program will calculate someones age in months, days, hours, seconds.
+
+
 def calculate_age_months(years):
     age_months = years * 12
 
@@ -34,13 +37,15 @@ def display_results(age_months, age_days, age_hours, age_seconds):
     print(str(age_days) + " Days old")
     print(str(age_hours) + " Hours old")
     print(str(age_seconds) + " Seconds old")
+   
+    
+def main():
+    years = get_age()
+    age_months = calculate_age_months(years)
+    age_days = calculate_age_days(years)
+    age_hours = calculate_age_hours(age_days)
+    age_seconds = calculate_age_seconds(age_hours)
+    display_results(age_months, age_days, age_hours, age_seconds)
 
 
-# Main
-# This program will calculate someones age in months, days, hours, seconds.
-years = get_age()
-age_months = calculate_age_months(years)
-age_days = calculate_age_days(years)
-age_hours = calculate_age_hours(age_days)
-age_seconds = calculate_age_seconds(age_hours)
-display_results(age_months, age_days, age_hours, age_seconds)
+main()
