@@ -1,34 +1,35 @@
-def Calculate_Age_Months(years):
-    AgeMonths = years * 12
 
-    return AgeMonths
+def calculateAnnualPay(wP):
+    annualPay = wP * 52
+    
+    return annualPay
 
-def Calculate_Age_Days(years):
-    AgeDays = years * 365
+def calculateMonthlyPay(wP):
+    monthlyPay = wP * 4
+    
+    return monthlyPay
 
-    return AgeDays
+def calculateWeeklyPay(hours, rate):
+    weeklyPay = rate * hours
+    
+    return weeklyPay
 
-def Calculate_Age_Hours(AgeDays):
-    AgeHours = AgeDays * 24
+def displayResults(weeklyPay, monthlyPay, annualPay):
+    print("$" + str(weeklyPay) + " Per week")
+    print("$" + str(monthlyPay) + " Per month")
+    print("$" + str(annualPay) + " Annually")
 
-    return AgeHours
+def getHours():
+    print("Enter hours worked: ")
+    localHours = float(input())
+    
+    return localHours
 
-def Calculate_Age_Seconds(AgeHours):
-    AgeSeconds = AgeHours * 3600
+def getRate():
+    print("Enter rate per hour: ")
+    rate = float(input())
 
-    return AgeSeconds
-
-def Get_Age():
-    print("Please enter your age in years: ")
-    years = float(input())
-
-    return years
-
-def Display_Results(AgeMonths, AgeDays, AgeHours, AgeSeconds)
-    print( str(AgeMonths) + " Months old")
-    print( str(AgeDays) + " Days old")
-    print( str(AgeHours) + " Hours old")
-    print( str(AgeSeconds) + " Seconds old")
+    return rate
 
 # Main
 # This program will calculate someones age in months, days, hours, seconds.
