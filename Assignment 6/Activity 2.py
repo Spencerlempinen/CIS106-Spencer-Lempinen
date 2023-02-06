@@ -1,41 +1,40 @@
-def Calculate_Age_Months(years):
-    AgeMonths = years * 12
+def calculate_age_months(years):
+    age_months = years * 12
 
-    return AgeMonths
+    return age_months
 
-def Calculate_Age_Days(years):
-    AgeDays = years * 365
+def calculate_age_days(years):
+    age_days = years * 365
 
-    return AgeDays
+    return age_days
 
-def Calculate_Age_Hours(AgeDays):
-    AgeHours = AgeDays * 24
+def calculate_age_hours(age_days):
+    age_hours = age_days * 24
 
-    return AgeHours
+    return age_hours
 
-def Calculate_Age_Seconds(AgeHours):
-    AgeSeconds = AgeHours * 3600
+def calculate_age_seconds(age_hours):
+    age_seconds = age_hours * 3600
 
-    return AgeSeconds
+    return age_seconds
 
-def Get_Age():
+def get_age():
     print("Please enter your age in years: ")
     years = float(input())
 
     return years
 
-def Display_Results(AgeMonths, AgeDays, AgeHours, AgeSeconds)
-    print( str(AgeMonths) + " Months old")
-    print( str(AgeDays) + " Days old")
-    print( str(AgeHours) + " Hours old")
-    print( str(AgeSeconds) + " Seconds old")
+def display_results(age_months, age_days, age_hours, age_seconds):
+    print( str(age_months) + " Months old")
+    print( str(age_days) + " Days old")
+    print( str(age_hours) + " Hours old")
+    print( str(age_seconds) + " Seconds old")
 
 # Main
 # This program will calculate someones age in months, days, hours, seconds.
-years = Get_Age()
-AgeMonths = Calculate_Age_Months(years)
-AgeDays = Calculate_Age_Days(years) 
-AgeHours = Calculate_Age_Hours(AgeDays)
-AgeSeconds = Calculate_Age_Seconds(AgeHours)
-Display_Results(AgeMonths, AgeDays, AgeHours, AgeSeconds)
-
+years = get_age()
+age_months = calculate_age_months(years)
+age_days = calculate_age_days(years)
+age_hours = calculate_age_hours(age_days)
+age_seconds = calculate_age_seconds(age_hours)
+display_results(age_months, age_days, age_hours, age_seconds)
