@@ -1,10 +1,10 @@
 def calculateAnnualPay(wP):
-    annualPay = wP * 52
+    annualPay = weeklyPay * 52
     
     return annualPay
 
 def calculateMonthlyPay(wP):
-    monthlyPay = wP * 4
+    monthlyPay = weeklyPay * 4
     
     return monthlyPay
 
