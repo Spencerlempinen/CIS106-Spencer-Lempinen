@@ -38,4 +38,3 @@ weeklyPay = calculateWeeklyPay(hours, rate)
 monthlyPay = calculateMonthlyPay(weeklyPay)
 annualPay = calculateAnnualPay(weeklyPay)
 displayResults(weeklyPay, monthlyPay, annualPay)
-
