@@ -1,9 +1,9 @@
-def calculateAnnualPay(wP):
+def calculateAnnualPay(weeklyPay):
     annualPay = weeklyPay * 52
     
     return annualPay
 
-def calculateMonthlyPay(wP):
+def calculateMonthlyPay(weeklyPay):
     monthlyPay = weeklyPay * 4
     
     return monthlyPay
