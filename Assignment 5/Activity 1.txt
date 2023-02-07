@@ -1,8 +1,8 @@
-This program converts an input Fahrenheit temperature to Celsius.
+This program converts rate and hours into ,weekly,monthly,annual income
 
 Main Program
-    Get Rate
     Get Hours
+    Get Rate
     Calculate Weekly Income
     Calculate Monthly Income
     Calculate Annual Income
