@@ -1,4 +1,4 @@
-# This program will calculate someones age in months, days, hours, seconds.
+# This program will calculate someones age in years to age in months, days, hours, seconds.
 
 
 def calculate_age_months(years):
