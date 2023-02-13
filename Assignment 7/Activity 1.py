@@ -1,6 +1,6 @@
 # this prgram will calculate users weekly, monthly, and annual apy
 # References:
-#
+# https://www.youtube.com/watch?v=AWek49wXGzI
 
 def get_hours():
     print("Enter hours worked")
