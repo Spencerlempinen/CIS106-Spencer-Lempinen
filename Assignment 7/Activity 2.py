@@ -5,38 +5,33 @@
 
 def calculate_months(years):
     age_months = years * 12
-
     return age_months
 
 
 def calculate_days(years):
     age_days = years * 365
-
     return age_days
 
 
 def calculate_hours(years):
-    age_hours = years*365*24
+    age_hours = years * 365 * 24
 
     return age_hours
 
 
 def calculate_seconds(years):
-    age_seconds = years*365*24*3600
-
+    age_seconds = years * 365 * 24 * 3600
     return age_seconds
 
 
 def get_age():
     print("Please enter your age in years: ")
     years = float(input())
-
     return years
 
 def get_unit():
     print("Would you like your age in (M)onths,(D)ays,(H)ours,(S)econds?")
     unit = str(input())
-    
     return unit
 
 
