@@ -42,8 +42,6 @@ def display_results(results):
 def main():
     years = get_age()
     unit = get_unit()
-   
-  
     if unit == "M":
         age_months = calculate_months(years)
         display_results(str(age_months) + " Months Old")
