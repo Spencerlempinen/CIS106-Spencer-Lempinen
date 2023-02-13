@@ -1,5 +1,6 @@
 # This program will calculate someones age in months, days, hours, seconds.
-#References: https://www.youtube.com/watch?v=AWek49wXGzI
+# References: 
+# https://www.youtube.com/watch?v=AWek49wXGzI
 
 
 def calculate_months(years):
@@ -14,14 +15,14 @@ def calculate_days(years):
     return age_days
 
 
-def calculate_hours(age_days):
-    age_hours = age_days * 24
+def calculate_hours(years):
+    age_hours = years*365*24
 
     return age_hours
 
 
-def calculate_seconds(age_hours):
-    age_seconds = age_hours * 3600
+def calculate_seconds(years):
+    age_seconds = years*365*24*3600
 
     return age_seconds
 
@@ -47,19 +48,19 @@ def display_results(results):
 def main():
     years = get_age()
     unit = get_unit()
-    age_months = calculate_months(years)
-    age_days = calculate_days(years)
-    age_hours = calculate_hours(age_days)
-    age_seconds = calculate_seconds(age_hours)
-    
-
+   
+  
     if unit == "M":
+        age_months = calculate_months(years)
         display_results(str(age_months) + " Months Old")
     elif unit == "D":
+        age_days = calculate_days(years)
         display_results(str(age_days) + " Days old")
     elif unit == "H":
+        age_hours = calculate_hours(years)
         display_results(str(age_hours) + " Hours old")
     elif unit == "S":
+        age_seconds = calculate_seconds(years)
         display_results(str(age_seconds) + " Seconds old")
     else:
         display_results("Invalid input")
