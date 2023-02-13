@@ -3,10 +3,10 @@ This program converts input age in years to age in months, days, hours, and seco
 Main Program
     Get Age in years
     Get Unit user would like to see years converted to
-    Calculate Age in Months
-    Calculate Age in Days
-    Calculate Age in Hours
-    Calculate Age in Seconds
+    If Unit is Months result is Calculate Age in Months
+    If Unit is Days result is Calculate Age in Days
+    If unit is Hours result is Calculate Age in Hours
+    If unit is Seconds result is Calculate Age in Seconds
     Dsiplay result
 
 Get Age in Years
@@ -36,32 +36,24 @@ Calculate Age in Days
         
 Calculate Age in Hours
     Parameters:
-        Age in Days
+        Age in Years
     Process:
-        Calculate Age in Hours from Age in Days*365
+        Calculate Age in Hours from Years*365*24
     Return Value:
         Age in Hours
         
 Calculate Age in Seconds
     Parameters:
-        Age in Hours
+        Age in years
     Process:
-        Calculate Age in Seconds from Age in Hours*3600
+        Calculate Age in Seconds from Years*365*24*3600
     Return Value:
         Age in Seconds
         
 Display Result
     Parameters:
-       Years
-       Unit
-       Age in Months
-       Age in Days
-       Age in Hours
-       Age in Seconds
+      Results
     Process:
-        if unit is Months then Display Age in Months
-        if unit is Days Then Display Age in Days
-        if unit is Hours then Display Age in Hours
-        if Unit is Seconds thenDisplay Age in Seconds
+      Print the results
     Return Value:
         Result
