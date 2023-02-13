@@ -51,6 +51,7 @@ def main():
     age_days = calculate_days(years)
     age_hours = calculate_hours(age_days)
     age_seconds = calculate_seconds(age_hours)
+    
 
     if unit == "M":
         display_results(str(age_months) + " Months Old")
