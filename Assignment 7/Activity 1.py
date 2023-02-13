@@ -2,6 +2,7 @@
 # References:
 # https://www.youtube.com/watch?v=AWek49wXGzI
 
+
 def get_hours():
     print("Enter hours worked")
     hours = float(input())
