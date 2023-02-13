@@ -1,5 +1,5 @@
 # This program will calculate someones age in months, days, hours, seconds.
-#References: https://www.youtube.com/watch?v=AWek49wXGzI
+# References: https://www.youtube.com/watch?v=AWek49wXGzI
 
 
 def calculate_months(years):
