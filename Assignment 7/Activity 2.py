@@ -64,5 +64,4 @@ def main():
         display_results("Invalid input")
         
 
-
 main()
