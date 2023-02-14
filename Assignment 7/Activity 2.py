@@ -35,8 +35,11 @@ def get_unit():
     return unit
 
 
-def display_results(results, label):
-    print(f"{results}  {label} Old")
+def display_results(results, label=None):
+    if label:
+        print(f"{results}  {label} Old")
+    else:
+        print(results)
 
         
 def main():
