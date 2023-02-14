@@ -30,13 +30,13 @@ def get_age():
 
 
 def get_unit():
-    print("Would you like your age in (M)onths,(D)ays,(H)ours,(S)econds?")
-    unit = str(input())
+    print("Would you like your age in (M)onths, (D)ays, (H)ours, (S)econds?")
+    unit = input()
     return unit
 
 
-def display_results(results):
-    print(results)
+def display_results(results, label):
+    print(f"{results}  {label} Old")
 
         
 def main():
@@ -44,16 +44,16 @@ def main():
     unit = get_unit()
     if unit == "M":
         age_months = calculate_months(years)
-        display_results(str(age_months) + " Months Old")
+        display_results(age_months, "Months")
     elif unit == "D":
         age_days = calculate_days(years)
-        display_results(str(age_days) + " Days old")
+        display_results(age_days, "Days")
     elif unit == "H":
         age_hours = calculate_hours(years)
-        display_results(str(age_hours) + " Hours old")
+        display_results(age_hours, "Hours")
     elif unit == "S":
         age_seconds = calculate_seconds(years)
-        display_results(str(age_seconds) + " Seconds old")
+        display_results(age_seconds, "Seconds")
     else:
         display_results("Invalid input")
         
