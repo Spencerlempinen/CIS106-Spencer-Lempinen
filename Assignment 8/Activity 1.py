@@ -5,7 +5,7 @@
 
 def get_value():
     print("Please enter a value: ")
-    value = float(input())
+    value = int(input())
     return value
 
 
