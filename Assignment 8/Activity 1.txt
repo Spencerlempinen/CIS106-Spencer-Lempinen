@@ -1,0 +1,39 @@
+Main Program
+    Get value
+    Get amount of expressions
+    Demonstrate For Loop
+    display epxressions
+
+Get Value
+    Parameters:
+    Process:
+        Display prompt asking for a value
+        Get value
+    Return Value:
+        Value
+        
+Get Amount
+    Parameters:
+    Process:
+        Display prompt asking for amount of expressions
+        Get number of expressions
+    Return Value:
+        amount
+
+Demonstrate For Loop
+    Parameters:
+        Value
+        Amount
+    Process:
+        iterate from 1 up to provided amount
+        for each iteration multiply by the value provided
+    Return Value:
+        expressions
+     
+Display output
+    Parameters:
+        Expressions
+    Process:
+        print list of expressions requested by user 
+    Return Value:
+        None
