@@ -4,7 +4,7 @@
 
 
 def get_amount():
-    print("Please eneter how many score you would like to average: ")
+    print("Please eneter how many score's you would like to average: ")
     amount = int(input())
     return amount
 
@@ -27,7 +27,7 @@ def calculate_average(amount):
     
 
 def display_output(average):
-    print("The average is: " + str(average))
+    print("The average is: " + str(average) + "%)
 
 
 def main():
