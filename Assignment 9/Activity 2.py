@@ -27,7 +27,7 @@ def calculate_average(amount):
     
 
 def display_output(average):
-    print("The average is: " + str(average) + "%)
+    print("The average is: " + str(average) + "%")
 
 
 def main():
