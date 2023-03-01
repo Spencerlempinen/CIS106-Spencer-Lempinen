@@ -4,7 +4,7 @@
 
 
 def get_amount():
-    print("Please eneter how many test score's you would like to average: ")
+    print("Please eneter how many score you would like to average: ")
     amount = int(input())
     return amount
 
@@ -37,3 +37,4 @@ def main():
 
 
 main()
+
