@@ -1,4 +1,4 @@
-# This Program will take a user specified amount of test scores and average them
+# This Program will average test scores privided by user
 # References:
 # https://www.youtube.com/watch?v=DdsxsW3UUX0&ab_channel=CodingwithChapa
 
@@ -37,4 +37,3 @@ def main():
 
 
 main()
-
