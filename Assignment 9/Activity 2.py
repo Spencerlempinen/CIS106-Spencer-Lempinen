@@ -1,10 +1,10 @@
-# This Program will ask the user for a specified amount of test score and average them
+# This Program will take a user specified amount of test score's and average them
 # References:
 # https://www.youtube.com/watch?v=DdsxsW3UUX0&ab_channel=CodingwithChapa
 
 
 def get_amount():
-    print("Please eneter how many score's you would like to average: ")
+    print("Please eneter how many test score's you would like to average: ")
     amount = int(input())
     return amount
 
