@@ -1,3 +1,5 @@
+This program will cvalculate the user's average test score
+
 Main Program
     Get amount of scores
     Get scores
