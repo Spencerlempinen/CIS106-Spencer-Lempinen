@@ -24,13 +24,15 @@ Get scores
 
 Demonstrate while Loop
     Parameters:
-        scores
+        Scores
         Amount
+        Count
     Process:
         Intitialize count and score
-        repeat aslong as count is less than amount of scores
-        add each score to the sum and incrment the count variable by 1
-        divide sum by amount
+        Loop While Count is less than Amount
+        add Score to the sum
+        Increment count by 1
+        
     Return Value:
         Average test score
      
