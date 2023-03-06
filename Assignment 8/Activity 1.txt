@@ -3,8 +3,7 @@ This program will give a list of expressions based on user input
 Main Program
     Get value
     Get amount of expressions
-    Demonstrate For Loop
-    display epxressions
+    Process expressions
 
 Get Value
     Parameters:
@@ -22,13 +21,15 @@ Get Amount
     Return Value:
         amount
 
-Demonstrate For Loop
+Process Expressions
     Parameters:
         Value
         Amount
     Process:
+        Create empty expression list
         iterate from 1 up to provided amount
         for each iteration multiply by the value provided
+            append expression to list
     Return Value:
         expressions
      
