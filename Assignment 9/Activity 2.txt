@@ -1,0 +1,41 @@
+Main Program
+    Get amount of scores
+    Get scores
+    Demonstrate while Loop
+    display epxressions
+
+Get amount of scores
+    Parameters:
+    Process:
+        Display prompt asking for amount of scores
+        Get number of scores
+    Return Value:
+        Value
+        
+Get scores
+    Parameters:
+    Process:
+        Display prompt asking for scores
+        Get scores
+    Return Value:
+        amount
+
+Demonstrate while Loop
+    Parameters:
+        scores
+        Amount
+    Process:
+        Intitialize count and score
+        repeat aslong as count is less than amount of scores
+        add each score to the sum and incrment the count variable by 1
+        divide sum by amount
+    Return Value:
+        Average test score
+     
+Display output
+    Parameters:
+        Average test scores
+    Process:
+        print the average test score
+    Return Value:
+        None
