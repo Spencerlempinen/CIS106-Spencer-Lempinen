@@ -1,3 +1,5 @@
+This program will give a list of expressions based on user input
+
 Main Program
     Get value
     Get amount of expressions
