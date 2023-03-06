@@ -32,7 +32,8 @@ Demonstrate while Loop
         Loop While Count is less than Amount
         add Score to the sum
         Increment count by 1
-        
+        Complete Loop
+        Divide sum by Amount
     Return Value:
         Average test score
      
