@@ -16,13 +16,13 @@ def get_score():
 
 
 def calculate_average(amount):
-    thesum = 0
+    sum = 0
     count = 0
     while count < amount:
         score = get_score()
-        thesum += score
+        sum += score
         count += 1
-    average = thesum / amount
+    average = sum / amount
     return average
     
 
