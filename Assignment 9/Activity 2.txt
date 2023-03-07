@@ -2,8 +2,7 @@ This program will cvalculate the user's average test score
 
 Main Program
     Get amount of scores
-    Get scores
-    Demonstrate while Loop
+    Get average
     display epxressions
 
 Get amount of scores
@@ -14,25 +13,24 @@ Get amount of scores
     Return Value:
         Value
         
-Get scores
+Get score
     Parameters:
+        None
     Process:
-        Display prompt asking for scores
-        Get scores
+        Display prompt asking for score
+        Get score
     Return Value:
         amount
 
-Demonstrate while Loop
+Get average
     Parameters:
-        Scores
         Amount
-        Count
     Process:
         Intitialize count and score
         Loop While Count is less than Amount
-        add Score to the sum
-        Increment count by 1
-        Complete Loop
+            Get score
+            add Score to the sum
+            Increment count by 1
         Divide sum by Amount
     Return Value:
         Average test score
