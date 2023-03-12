@@ -1,5 +1,6 @@
-# This program will guess a number that the user is thinking of
-# Reference: https://www.youtube.com/watch?v=M3zmcj8sNu8&ab_channel=GeekTutorials
+# This program guesses the number that the user is thinking of
+# References: 
+# https://www.youtube.com/watch?v=M3zmcj8sNu8&ab_channel=GeekTutorials
 
 
 import random
