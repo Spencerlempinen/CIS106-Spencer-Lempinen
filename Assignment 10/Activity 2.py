@@ -3,10 +3,6 @@
 # https://www.youtube.com/watch?v=M3zmcj8sNu8&ab_channel=GeekTutorials
 
 
-def get_user_input():
-    return input("Think of a number between 1 and 100, then press Enter to continue...")
-
-
 def process_guess():
     low = 0
     high = 100
@@ -29,9 +25,9 @@ def display_output(num_guesses):
 
 
 def main():
-    get_user_input()
-    num_guesses = process_guess()
-    display_output(num_guesses)
+    print("Think of a number between 1 and 100...")
+    guesses = process_guess()
+    display_output(guesses)
 
 
 main()
