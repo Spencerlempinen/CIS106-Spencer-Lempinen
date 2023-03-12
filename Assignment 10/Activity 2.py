@@ -17,7 +17,7 @@ def process_guess():
 
     while True:
         guess = guess_number(low, high)
-        response = input("Is your number " + str(guess) + "? ([h]igh/[l]ow/[e]qual)")
+        response = input("Is your number " + str(guess) + "? ([h]/[l]/[e])")
         guess_count += 1
         if response == 'h':
             low = guess + 1
@@ -32,7 +32,6 @@ def display_output(guesses):
 
 
 def main():
-    print("Think of a number between 1 and 100...")
     guesses = process_guess()
     display_output(guesses)
 
