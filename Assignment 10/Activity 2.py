@@ -3,25 +3,32 @@
 # https://www.youtube.com/watch?v=M3zmcj8sNu8&ab_channel=GeekTutorials
 
 
+import random
+
+
+def guess_number(low, high):
+    return random.randint(low, high)
+
+    
 def process_guess():
     low = 0
     high = 100
-    guesses = 0
-    
+    guess_count = 0
+
     while True:
-        mid = (low + high) // 2
-        response = input("Is your number " + str(mid) + "? ([h]igh/[l]ow/[e]qual)")
-        guesses += 1
+        guess = guess_number(low, high)
+        response = input("Is your number " + str(guess) + "? ([h]igh/[l]ow/[e]qual)")
+        guess_count += 1
         if response == 'h':
-            low = mid + 1
+            low = guess + 1
         elif response == 'l':
-            high = mid - 1
+            high = guess - 1
         else:
-            return guesses
+            return guess_count
 
 
-def display_output(num_guesses):
-    print("I guessed your number in " + str(num_guesses) + " guesses!")
+def display_output(guesses):
+    print("I guessed your number in " + str(guesses) + " guesses!")
 
 
 def main():
