@@ -9,7 +9,7 @@ guesses = 0
 
 
 def ask_for_number():
-    input("Think of a number between 1 and 100, then press Enter to continue...")
+    return input("Think of a number between 1 and 100, then press Enter to continue...")
 
 def number_guess():
     global low, high, guesses
