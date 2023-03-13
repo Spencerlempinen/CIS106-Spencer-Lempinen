@@ -1,5 +1,5 @@
 # This program will guess a number that the user is thinking of
-# Reference:
+# References:
 # https://www.youtube.com/watch?v=M3zmcj8sNu8&ab_channel=GeekTutorials
 
 
@@ -7,7 +7,6 @@ def guess_number(low, high):
     return (low + high) // 2
 
 
-    
 def process_guess():
     low = 0
     high = 100
