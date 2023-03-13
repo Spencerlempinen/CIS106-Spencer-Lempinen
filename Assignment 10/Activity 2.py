@@ -1,5 +1,5 @@
-# This program guesses the number that the user is thinking of
-# References: 
+# This program will guess a number that the user is thinking of
+# Reference:
 # https://www.youtube.com/watch?v=M3zmcj8sNu8&ab_channel=GeekTutorials
 
 
@@ -7,6 +7,7 @@ def guess_number(low, high):
     return (low + high) // 2
 
 
+    
 def process_guess():
     low = 0
     high = 100
@@ -14,7 +15,7 @@ def process_guess():
 
     while True:
         guess = guess_number(low, high)
-        response = input("Is your number " + str(guess) + "? (h/l/e)"
+        response = input("Is your number " + str(guess) + "? (h/l/e)")
         guess_count += 1
         if response == 'h':
             low = guess + 1
