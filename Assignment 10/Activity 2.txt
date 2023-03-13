@@ -1,1 +1,37 @@
+This program will guess a number the user is thinking of
 
+Main Program
+    Ask user to think of number 1-100
+    guess number
+    process guess based on user input
+    display number of guesses
+    
+Guess Number
+    Parameters:Low, High
+    Process:
+        Guess number based on (low + high)  // 2
+    Return Value:
+        Midpoint
+        
+Process Guess
+    Parameters:
+        None
+    Process:
+        Initiat Low, High, and guess count
+        guess count goes up by 1 for every guess
+        If response is high 
+            update low to be 1 more than guessed number
+        if response is low 
+            update high to be 1 less than guessed number
+        if response is equal 
+            return guess count
+    Return Value:
+        guess count
+     
+Display output
+    Parameters:
+        guess count
+    Process:
+        print the guess count
+    Return Value:
+        None
