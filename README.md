@@ -35,3 +35,7 @@ This activity really pushed me. I ended up watching a bunch of YouTube videos to
 ## Assignment 9
 
 The loop's seem to be my weakest link. I am still practicing and working on my understanding of this but I belive this assignment really helped. I am understanding that the "while" loop is used to repeat a peice of code "while" an expression is true. Once the expression is not true the program will break and continue on with the rest of the code. I really liked this activity becuase it implimented everything from implementing math into using function and type conversion which seem to be somthing I am doing without any problems. I plan on continuing to practice the "while" loop as it seems to be the most difficult for me right now but I am feeling ambitious about it.
+
+## Assignment 10
+
+This week I learned how important "Do" loop is and also how it is different from the while loop.A Do loop executes its block of code at least once before checking the loop condition. This means that the loop will always execute at least once, even if the loop condition is false from the beginning. In contrast, a While loop checks the loop condition before executing its block of code. If the condition is false from the start, the loop will not execute at all. I chose to do the Guessing Game activity and really leanred how a Do loop will just keep repeating itself guessing the number until the user eneters equal or there are no other possible asnwers than the one it output.
