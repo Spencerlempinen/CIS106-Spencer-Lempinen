@@ -19,12 +19,13 @@ Process Guess
     Process:
         Initiat Low, High, and guess count
         guess count goes up by 1 for every guess
-        If response is high 
-            update low to be 1 more than guessed number
-        if response is low 
-            update high to be 1 less than guessed number
-        if response is equal 
-            return guess count
+        Do
+            If response is high 
+                update low to be 1 more than guessed number
+            if response is low 
+                update high to be 1 less than guessed number
+            if response is equal 
+                return guess count
     Return Value:
         guess count
      
