@@ -3,8 +3,9 @@
 # https://www.youtube.com/watch?v=M3zmcj8sNu8&ab_channel=GeekTutorials
 
 
-def guess_number(low, high):
-    return (low + high) // 2
+def get_response(guess):
+    response = input("Is your number " + str(guess) + "? (h/l/e)")
+    return response
 
 
 def process_guess():
@@ -13,8 +14,8 @@ def process_guess():
     guess_count = 0
 
     while True:
-        guess = guess_number(low, high)
-        response = input("Is your number " + str(guess) + "? (h/l/e)")
+        guess = (low + high) // 2
+        response = get_response(guess)
         guess_count += 1
         if response == 'h':
             low = guess + 1
