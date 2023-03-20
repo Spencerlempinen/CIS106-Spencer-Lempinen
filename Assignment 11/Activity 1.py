@@ -16,9 +16,13 @@ def get_year():
 
 
 def get_month():
-    print("Please enter a month (1-12): ")
-    month = int(input())
-    return month
+    while True:
+        print("Please enter a month (1-12): ")
+        month = int(input())
+        if month <1 or month >12:
+            print(f"{month} is an invalid input.") 
+        else:
+            return month
     
 
 
@@ -35,15 +39,11 @@ def display_output(days, month, year):
 
 
 def main():
-    while True:
-        year = get_year()
-        month = get_month()
-        if month == 0:
-            print("0 is an invalid input.")
-            return
-        days = calculate_days(year, month)
-        display_output(days, month, year)
-        break
-
+    year = get_year()
+    month = get_month()
+    days = calculate_days(year, month)
+    display_output(days, month, year)
     
-main()   
+
+main() 
+
