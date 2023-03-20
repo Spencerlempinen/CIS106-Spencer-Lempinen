@@ -1,43 +1,45 @@
-# This program Will return users high low and average test score
+# This program returns the days in a month of a corresponding year
 # References
 # https://www.youtube.com/watch?v=6a39OjkCN5I&ab_channel=Telusko
 
 
-def get_amount():
-    print("Please enter how many scores you would like to average: ")
-    amount = int(input())
-    return amount
+month_names = ['January', 'February', 'March', 'April', 'May', 'June', 
+               'July', 'August', 'September', 'October', 'November', 'December']
 
 
-def get_score():
-    print("Please enter a score: ")
-    score = float(input())
-    return score
+days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
 
-def calculate_average(amount, scores):
-    thesum = 0
-    for score in scores:
-        thesum += score
-    average = thesum / amount
-    return scores, average
+def get_year():
+    print("please enter a year: ")
+    year = int(input())
+    return year
+
+
+def month_num():
+    print("please enter a month (1-12): ")
+    month = int(input())
+    return month
+
+
+def calculate_days(year, month):
+    if month == 2 and (year % 4 == 0 and year % 100 != 0 or year% 400 == 0):
+        days = 29
+        return days
+    else:
+        days = days_in_month[month - 1]
+        return days
     
 
-def display_output(scores, average):
-    high_score = max(scores)
-    low_score = min(scores)
-    print("The high score is:", high_score)
-    print("The low score is:", low_score)
-    print("The average score is:", average)
+def display_output(days, month, year):
+    print(f"{month_names[month-1]} {year} has {days} days")
 
 
 def main():
-    amount = get_amount()
-    scores = [0] * amount  
-    for i in range(amount):
-        scores[i] = get_score()  
-    scores, average = calculate_average(amount, scores)
-    display_output(scores, average)
+    year = get_year()
+    month = month_num()
+    days = calculate_days(year, month)
+    display_output(days, month, year)
 
-
+    
 main()
