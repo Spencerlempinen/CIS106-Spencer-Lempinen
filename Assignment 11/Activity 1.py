@@ -1,4 +1,4 @@
-# This program returns the days in a month of a corresponding year
+# This program returns the days in a month of a certain year
 # References
 # https://www.youtube.com/watch?v=6a39OjkCN5I&ab_channel=Telusko
 
