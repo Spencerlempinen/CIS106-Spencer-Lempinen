@@ -1,1 +1,62 @@
+This program returns the days in a month of a corresponding year
 
+
+Create list of months : [January', 'February', 'March', 
+               'April', 'May', 'June', 
+               'July', 'August', 'September', 
+               'October', 'November', 'December']
+               
+create list of corresponding days for the months : [31, 28, 31, 
+                                                   30, 31, 30, 
+                                                   31, 31, 30, 
+                                                   31, 30, 31]               
+
+
+
+Main Program
+    ask the user for a year
+    ask user for a month
+    calculate how many days in that month of that year
+    display days in that month of that year
+ 
+ 
+get years
+    Parameters:
+    Process:
+        ask user to input a year
+    Return Value:
+        year
+        
+        
+get month
+    Parameters:
+        None
+    Process:
+        While True
+            ask user to enter a year
+            if that month is less than 1 or more than 12
+                print invalid input
+            else 
+    Return Value:
+        return month
+
+
+Calculate days
+    Parameters:
+        year, month
+    Process:
+        if month is 2 and year is a leap year
+            days is 29
+        else
+            check array for the days of the month that was input         
+    Return Value:
+        return days
+     
+     
+Display output
+    Parameters:
+        days, month, years
+    Process:
+        print days in that month of that year
+    Return Value:
+        None
