@@ -1,22 +1,20 @@
 # This program will guess a number that the user is thinking of
-# Reference:
+# References:
 # https://www.youtube.com/watch?v=M3zmcj8sNu8&ab_channel=GeekTutorials
-# https://www.youtube.com/watch?v=z_M7a291pvE&ab_channel=HackersRealm
+# https://www.youtube.com/watch?v=z_M7a291pvE&t=18s&ab_channel=HackersRealm
 
 
 def guess_number(low, high):
     return (low + high) // 2
 
 
-    
 def process_guess():
     low = 0
     high = 100
     guess_count = []
-
     while True:
         guess = guess_number(low, high)
-        response = input(f"Is your number {guess}? Enter 'h' for higher, 'l' for lower, or 'e' for equal: ")
+        response = input(f"Is your number {guess}? (h/l/e) ")
         guess_count.append(guess)
         if response == 'h':
             low = guess + 1
@@ -24,7 +22,6 @@ def process_guess():
             high = guess - 1
         else:
             return guess_count
-
 
 
 def display_output(guesses):
