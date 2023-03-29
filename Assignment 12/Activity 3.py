@@ -25,7 +25,6 @@ def process_guess():
 
 
 def display_output(guesses):
-    print("The list of guesses required to guess your number is:")
     for i, guess in enumerate(guesses):
         print(f"{i+1}. {guess}")
 
