@@ -1,3 +1,5 @@
+this program will parse an input of variables
+
 Main Program
     Ask user for a string of calues seperated by commas
     split apart values based on the comma
