@@ -2,6 +2,7 @@
 # References:
 # https://www.youtube.com/watch?v=M3zmcj8sNu8&ab_channel=GeekTutorials
 # https://www.youtube.com/watch?v=z_M7a291pvE&t=18s&ab_channel=HackersRealm
+# https://chat.openai.com
 
 
 def guess_number(low, high):
