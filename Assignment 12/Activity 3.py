@@ -25,8 +25,7 @@ def process_guess():
 
 
 def display_output(guesses):
-    for i, guess in enumerate(guesses):
-        print(f"{guess} ")
+    print(', '.join(map(str, guesses)))
 
 
 def main():
