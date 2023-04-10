@@ -1,0 +1,30 @@
+Main Program
+    Ask user for a string of calues seperated by commas
+    split apart values based on the comma
+    for every item that is not a comma, print it
+    display all items
+    
+Get input
+    Parameters:
+    Process:
+        Ask user for a string of calues seperated by commas
+    Return Value:
+        line
+        
+process line
+    Parameters:line
+    Process:
+        split everything after each comma
+        each item string that is split is an item
+        store items in list
+        strip empty space
+    Return Value:
+        items
+        
+print items
+    Parameters:items
+    Process:
+        for every item that is returned in process line
+          print item
+    Return Value:
+        none
