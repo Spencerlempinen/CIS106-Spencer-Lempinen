@@ -5,24 +5,25 @@
 # https://chat.openai.com
 
 
-def guess_number(low, high):
-    return (low + high) // 2
+def get_response(guess):
+    response = input(f"Is your number {guess}? (h/l/e) ")
+    return response
 
 
 def process_guess():
     low = 0
     high = 100
-    guess_count = []
+    guesses = []
     while True:
-        guess = guess_number(low, high)
-        response = input(f"Is your number {guess}? (h/l/e) ")
-        guess_count.append(guess)
+        guess = (low + high) // 2
+        guesses.append(guess)
+        response = get_response(guess)
         if response == 'h':
             low = guess + 1
         elif response == 'l':
             high = guess - 1
         else:
-            return guess_count
+            return guesses
 
 
 def display_output(guesses):
