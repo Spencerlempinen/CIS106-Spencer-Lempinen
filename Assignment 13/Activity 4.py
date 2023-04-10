@@ -5,13 +5,15 @@ def scroll_text():
     direction = input("Enter the scroll direction (left or right): ")
     return text, num_chars, num_lines, direction
     
+
 def process_text(text, num_chars, num_lines, direction):
-    num_repeats = (num_chars // len(text)) + 1
+    num_repeats = (num_chars // len(text)) + 2
     repeated_text = text * num_repeats
-    line_text = repeated_text[:num_chars]
     lines = []
     for i in range(num_lines):
-        lines.append(line_text)
+        line_text = repeated_text[i*num_chars:(i+1)*num_chars]
+        if len(line_text) < num_chars:
+            line_text += repeated_text[(i+1)*num_chars:(i+2)*num_chars-len(line_text)]
         if direction == "right":
             line_text = line_text[-1] + line_text[:-1]
         elif direction == "left":
@@ -19,6 +21,7 @@ def process_text(text, num_chars, num_lines, direction):
         else:
             print("Invalid direction.")
             return
+        lines.append(line_text)
     return lines
 
 
@@ -26,11 +29,9 @@ def output_lines(lines):
     for line in lines:
         print(line)
 
-
 def main():
     text, num_chars, num_lines, direction = scroll_text()
     lines = process_text(text, num_chars, num_lines, direction)
     output_lines(lines)
-
 
 main()
