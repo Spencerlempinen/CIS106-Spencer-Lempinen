@@ -7,17 +7,30 @@ def read_scores(filename):
     try:
         with open(filename, 'r') as f:
             lines = f.readlines()[1:]
-        if not lines:
-            print("Error: file is empty")
-            return none
-            scores = []
-            for line in lines:
-                name, score = line.strip().split(',')
-                scores.append(int(score))
-            return scores
+            if not lines:
+                print("Error: file is empty.")
+                return None
+            return process_scores(lines)
     except FileNotFoundError:
         print(f"Error: file {filename} not found.")
         return None
+
+
+def process_scores(lines):
+    scores = []
+    for line in lines:
+        fields = line.strip().split(',')
+        if len(fields) != 2:
+            print("Error: missing or bad data.")
+            return None
+        name, score = fields
+        try:
+            score = int(score)
+        except ValueError:
+            print("Error: missing or bad data.")
+            return None
+        scores.append(score)
+    return scores
 
 
 def display_scores(scores):
@@ -33,9 +46,10 @@ def display_scores(scores):
 
 
 def main():
-    filename = "scores.txt"
+    filename = "empty.txt"
     scores = read_scores(filename)
-    display_scores(scores)
+    if scores is not None:
+        display_scores(scores)
 
 
 main()
