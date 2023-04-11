@@ -7,6 +7,9 @@ def read_scores(filename):
     try:
         with open(filename, 'r') as f:
             lines = f.readlines()[1:]
+        if not lines
+            print("Error: file is empty")
+            return none
             scores = []
             for line in lines:
                 name, score = line.strip().split(',')
