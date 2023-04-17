@@ -8,15 +8,15 @@ def read_scores(filename):
         with open(filename, 'r') as f:
             lines = f.readlines()[1:]
             if not lines:
-                Errors('empty_file')
+                file_errors('empty_file')
                 return None
             scores = process_scores(lines)
             if scores is None:
-                Errors('bad_data')
+                file_errors('bad_data')
                 return None
             return scores
     except FileNotFoundError:
-        Errors('no_file', filename=filename)
+        file_errors('no_file', filename=filename)
         return None
 
 
@@ -35,7 +35,7 @@ def process_scores(lines):
     return scores
 
 
-def Errors(error_type, filename=None):
+def file_errors(error_type, filename=None):
     if error_type == 'bad_data':
         print("Error: missing or bad data.")
     elif error_type == 'empty_file':
@@ -57,7 +57,7 @@ def display_scores(scores):
 
 
 def main():
-    filename = "scores.txt"
+    filename = "empty.txt"
     scores = read_scores(filename)
     if scores is not None:
         display_scores(scores)
