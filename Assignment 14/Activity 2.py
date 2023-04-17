@@ -57,7 +57,7 @@ def display_scores(scores):
 
 
 def main():
-    filename = "empty.txt"
+    filename = "scores.txt"
     scores = read_scores(filename)
     if scores is not None:
         display_scores(scores)
