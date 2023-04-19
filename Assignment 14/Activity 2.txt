@@ -1,1 +1,61 @@
+This program will average a set of scores from a .txt file.
 
+Main Program
+    open file named "score.txt"
+        return error if not found
+    check for errors
+        return proper error
+    if no errors and proper file name
+        display scores
+Read scores
+    Parameters:filename
+    Process:
+    try
+        with open file with appropriate file name
+            if filename not found 
+                call file_errors(no_file)
+            if no scores
+                call file_errors(bad_data)
+            return scores
+        except if the file is not found
+            call file_errors(no_file)
+    Return Value:
+        scores
+        
+process scores
+    Parameters:line
+    Process:
+    for every line in the file
+        remove any white space
+        split strings into two fields (name, score)
+        convert scores to integer and append to score list
+    Return Value:
+        scores
+        
+file errors
+    Parameters:error types, filename = none
+    Process:
+        if error is bad data
+            print "Error missing or bad data"
+        elif error type is empty file
+            print "Error: file is empty"
+        elif error is no file
+            print "Error: {filename} not found"
+          print item
+    Return Value:
+        none
+        
+Display scores
+    Parameters: scores
+    Process:
+        if score is none
+            return none
+        print "scores:"
+        for every score in the score list 
+            print score
+        print highest score
+        print lowest score
+        average score is sum of all scores givided by the amount of scores
+        print average score
+    Return Value:
+        none
