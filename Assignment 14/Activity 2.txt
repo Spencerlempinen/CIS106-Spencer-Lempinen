@@ -1,61 +1,77 @@
 This program will average a set of scores from a .txt file.
 
 Main Program
-    open file named "score.txt"
-        return error if not found
-    check for errors
-        return proper error
-    if no errors and proper file name
-        display scores
+    read file
+    calculate high score
+    calculate low score
+    calculate average score
+    display results
+
 Read scores
-    Parameters:filename
+    Parameters:
+        filename
     Process:
-    try
-        with open file with appropriate file name
-            if filename not found 
-                call file_errors(no_file)
-            if no scores
-                call file_errors(bad_data)
-            return scores
-        except if the file is not found
-            call file_errors(no_file)
+        initialize array
+        open file
+        while not end of file
+            read line
+            parse score
+            append score to array
+        close file
+        handle exceptions
     Return Value:
-        scores
-        
-process scores
-    Parameters:line
+        scores array
+
+Parse score
+    Parameters:
+        line
     Process:
-    for every line in the file
         remove any white space
         split strings into two fields (name, score)
-        convert scores to integer and append to score list
+        convert score to integer
     Return Value:
-        scores
-        
-file errors
-    Parameters:error types, filename = none
+        score
+
+Calculate high score
+    Parameters:
+        scores array
     Process:
-        if error is bad data
-            print "Error missing or bad data"
-        elif error type is empty file
-            print "Error: file is empty"
-        elif error is no file
-            print "Error: {filename} not found"
-          print item
+        check to make sure array isn't empty
+        calculate high score
     Return Value:
-        none
-        
+        high score
+
+Calculate low score
+    Parameters:
+        scores array
+    Process:
+        check to make sure array isn't empty
+        calculate low score
+    Return Value:
+        high score
+
+Calculate average score
+    Parameters:
+        scores array
+    Process:
+        check to make sure array isn't empty
+        calculate average score
+    Return Value:
+        average score
+
 Display scores
-    Parameters: scores
+    Parameters: 
+        scores
+        high
+        low
+        average
     Process:
-        if score is none
-            return none
         print "scores:"
         for every score in the score list 
             print score
+
         print highest score
         print lowest score
-        average score is sum of all scores givided by the amount of scores
         print average score
     Return Value:
         none
