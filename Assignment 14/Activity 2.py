@@ -8,32 +8,37 @@ def read_scores(filename):
     try:
         with open(filename, 'r') as f:
             lines = f.readlines()[1:]
-            if not lines:
-                print("Error: empty file")
+
+        if not lines:
+            print("Error: empty file")
+            return None
+
+        for line in lines:
+            score = parse_score(line)
+            if score is None:
+                print("Error: missing or bad data")
                 return None
-            for line in lines:
-                score = parse_score(line)
-                if score is None:
-                    print("Error: missing or bad data")
-                    return None
-                scores.append(score)
-            return scores
+
+            scores.append(score)
+
+        return scores
     except FileNotFoundError:
         print(f"Error: {filename} not found")
         return None
 
       
 def parse_score(line):
-    fields = line.strip().split(',')
-    if len(fields) != 2:
-        return None
-    name, score = fields
     try:
+        fields = line.strip().split(',')
+        if len(fields) != 2:
+            return None
+
+        name, score = fields
         score = int(score)
+        return score
     except ValueError:
         return None
-    return score
-
+    
    
 def calculate_high_score(scores):
     if not scores:
@@ -57,6 +62,7 @@ def display_scores(scores, high, low, average):
     print("Scores:")
     for score in scores:
         print(score)
+
     print(f"Highest score: {high}")
     print(f"Lowest score: {low}")
     print(f"Average score: {average}")
