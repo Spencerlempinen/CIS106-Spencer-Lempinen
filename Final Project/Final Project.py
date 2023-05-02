@@ -22,12 +22,12 @@ def read_catalog(url):
     return titles, artists
 
 def display_output(titles, artists):
-    for title in titles and artist in artists:
-        print(title + "-" + artist)
+    for i in range(len(titles)):
+        print(titles[i] + " - " + artists[i])
 
 def main():
     url = "https://www.w3schools.com/xml/cd_catalog.xml"
-    titles = read_catalog(url)
-    display_output(titles)
+    titles, artists = read_catalog(url)
+    display_output(titles, artists)
 
 main()
