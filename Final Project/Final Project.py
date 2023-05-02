@@ -3,6 +3,7 @@ import requests
 
 def read_catalog(url):
     titles = []
+    artists = []
 
     response = requests.get(url)
     if response.status_code != 200:
@@ -14,12 +15,15 @@ def read_catalog(url):
 
     for cd in cds:
         title = re.search(r'<TITLE>(.+?)</TITLE>', cd).group(1)
+        artist = re.search(r'<ARTIST>(.+?)</ARTIST>', cd).group(1)
         titles.append(title)
-    return titles
+        artists.append(artist)
 
-def display_output(titles):
-    for title in titles:
-        print(title)
+    return titles, artists
+
+def display_output(titles, artists):
+    for title in titles and artist in artists:
+        print(title + "-" + artist)
 
 def main():
     url = "https://www.w3schools.com/xml/cd_catalog.xml"
@@ -27,4 +31,3 @@ def main():
     display_output(titles)
 
 main()
-
