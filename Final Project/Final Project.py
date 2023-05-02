@@ -9,7 +9,7 @@ def read_catalog(url):
     response = requests.get(url)
     if response.status_code != 200:
         print(f"failed to retrieve data from {url}")
-        return titles
+        return 
 
     cd_regex = re.compile(r'<CD>(.+?)</CD>', re.DOTALL)
     cds = re.findall(cd_regex, response.text)
