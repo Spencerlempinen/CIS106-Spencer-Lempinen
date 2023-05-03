@@ -20,8 +20,8 @@ def read_catalog(url):
         title = re.search(r'<TITLE>(.+?)</TITLE>', cd).group(1)
         artist = re.search(r'<ARTIST>(.+?)</ARTIST>', cd).group(1)
         country = re.search(r'<COUNTRY>(.+?)</COUNTRY', cd).group(1)
-        prices = float(re.search(r'<PRICE>(.+?)</PRICE>', cd).group(1))
-        years = int(re.search(r'<YEAR>(.+?)</YEAR>', cd).group(1))
+        price = float(re.search(r'<PRICE>(.+?)</PRICE>', cd).group(1))
+        year = int(re.search(r'<YEAR>(.+?)</YEAR>', cd).group(1))
         titles.append(title)
         artists.append(artist)
         countries.append(country)
@@ -32,7 +32,7 @@ def read_catalog(url):
 
 def display_output(titles, artists, countries, prices, years):
     for i in range(len(titles)):
-        print(titles[i] + " - " + artists[i] + " - " + countries[i] + " - " + "$" + prices[i] + " - " + years[i])
+        print(f"{titles[i]} - {artists[i]} - {countries[i]} - ${prices[i]:.2f} - {years[i]}")
 
 def main():
     url = "https://www.w3schools.com/xml/cd_catalog.xml"
