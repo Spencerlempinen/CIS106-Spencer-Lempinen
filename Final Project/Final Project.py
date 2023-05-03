@@ -9,7 +9,7 @@ def read_catalog(url):
     response = requests.get(url)
     if response.status_code != 200:
         print(f"failed to retrieve data from {url}")
-        return 
+        return titles
 
     cd_regex = re.compile(r'<CD>(.+?)</CD>', re.DOTALL)
     cds = re.findall(cd_regex, response.text)
@@ -18,19 +18,21 @@ def read_catalog(url):
         title = re.search(r'<TITLE>(.+?)</TITLE>', cd).group(1)
         artist = re.search(r'<ARTIST>(.+?)</ARTIST>', cd).group(1)
         country = re.search(r'<COUNTRY>(.+?)</COUNTRY', cd).group(1)
+        prices = re.search(r'<PRICE>(.+?)</PRICE>', cd).group(1)
         titles.append(title)
         artists.append(artist)
         countries.append(country)
+        prices.append(price)
 
-    return titles, artists, countries
+    return titles, artists, countries, prices
 
-def display_output(titles, artists, countries):
+def display_output(titles, artists, countries, prices):
     for i in range(len(titles)):
-        print(titles[i] + " - " + artists[i] + " - " + countries[i])
+        print(titles[i] + " - " + artists[i] + " - " + countries[i] + " - " + prices[i])
 
 def main():
     url = "https://www.w3schools.com/xml/cd_catalog.xml"
     titles, artists, countries = read_catalog(url)
-    display_output(titles, artists, countries)
+    display_output(titles, artists, countries, prices)
 
 main()
