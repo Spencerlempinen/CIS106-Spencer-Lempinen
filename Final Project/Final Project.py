@@ -3,6 +3,7 @@
 # https://www.youtube.com/shorts/LjXBaYCvlhY
 # https://www.youtube.com/watch?v=tlHNS-UTRIM&t=756s&ab_channel=NeuralNine
 # Nick Rich(friend who does cloud security with CDW) :helped with the get_page_text function
+#co-pilot
 
 
 import urllib.request
@@ -39,17 +40,18 @@ def calculate_avg(prices):
         avg_price = total_price / num_items
         return print(f"{num_items} items - ${avg_price:.2f} average price")
 
-    
-def display_catalog(titles, artists, countries, prices, years):
-    if len(titles) == 0:
-        print("Error: missing or bad data")
-        return None
-    else:
-        print("title - artist - country - price - year")
-        for i in range(len(titles)):
-            print(f"{titles[i]} - {artists[i]} - {countries[i]} - ${prices[i]:.2f} - {years[i]}")
 
-            
+def display_catalog(titles, artists, countries, prices, years, num_items_to_display=None):
+    num_items = len(titles)
+    if num_items == 0:
+        raise ValueError("File is missing")
+    if num_items_to_display is not None and num_items_to_display < num_items:
+        num_items = num_items_to_display
+    print("title - artist - country - price - year")
+    for i in range(num_items):
+        print(f"{titles[i]} - {artists[i]} - {countries[i]} - ${prices[i]:.2f} - {years[i]}")
+
+
 def main():
     catalog_url = "https://www.w3schools.com/xml/cd_catalog.xml"
     page_text = get_page_text(catalog_url)
@@ -59,4 +61,3 @@ def main():
 
 
 main()
-
