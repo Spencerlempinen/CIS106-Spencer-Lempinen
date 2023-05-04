@@ -1,4 +1,4 @@
-import requests
+import urllib.request
 import re
 
 
@@ -12,8 +12,8 @@ def extract_cd_data(cd):
 
 
 def read_catalog(url):
-    response = requests.get(url)
-    if response.status_code != 200:
+    response = urllib.request.urlopen(url)
+    if response.status != 200:
         print(f"Failed to retrieve data from {url}")
         return None
     else:
@@ -23,7 +23,7 @@ def read_catalog(url):
         prices = []
         years = []
         cd_regex = re.compile(r'<CD>(.*?)</CD>', re.DOTALL)
-        cds = re.findall(cd_regex, response.text)
+        cds = re.findall(cd_regex, response.read().decode())
 
         for cd in cds:
             cd_data = extract_cd_data(cd)
@@ -61,6 +61,5 @@ def main():
     titles, artists, countries, prices, years = read_catalog(catalog_url)
     display_catalog(titles, artists, countries, prices, years)
     calculate_avg(titles, prices)
-
 
 main()
