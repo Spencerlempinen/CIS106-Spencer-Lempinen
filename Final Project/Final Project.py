@@ -10,15 +10,27 @@ import urllib.request
 import re
 
 
-def get_page_text(url):
-    with urllib.request.urlopen(url) as response:
-        page_text = response.read().decode('utf-8')
-    return page_text
+def get_text(url):
+    try:
+        with urllib.request.urlopen(url) as response:
+            text = response.read().decode('utf-8')
+            if not text:
+                return ValueError("Error: file missing")
+            return text
+    except urllib.error.URLError as e:
+        return ValueError(f"Failed to retrieve data from {url}: {e}")
 
 
-def get_tag_values(page_text, tag_name):
-    tag_regex = re.compile(rf'<{tag_name}>(.*?)</{tag_name}>')
-    tag_values = re.findall(tag_regex, page_text)
+def get_tag_values(text, tag):
+    tag_regex = re.compile(fr'<{tag}>(.*?)</{tag}>', re.DOTALL)
+    tag_matches = re.findall(tag_regex, text)
+    if not tag_matches:
+        return ValueError("Error: missing or incorrect data")
+    tag_values = []
+    for match in tag_matches:
+        if not match.strip():
+            return ValueError("Error: missing or incorrect data")
+        tag_values.append(match.strip())
     return tag_values
 
 
@@ -44,7 +56,7 @@ def calculate_avg(prices):
 def display_catalog(titles, artists, countries, prices, years, num_items_to_display=None):
     num_items = len(titles)
     if num_items == 0:
-        raise ValueError("File is missing")
+        return ValueError("Error: missing or incorrect data")
     if num_items_to_display is not None and num_items_to_display < num_items:
         num_items = num_items_to_display
     print("title - artist - country - price - year")
@@ -54,7 +66,7 @@ def display_catalog(titles, artists, countries, prices, years, num_items_to_disp
 
 def main():
     catalog_url = "https://www.w3schools.com/xml/cd_catalog.xml"
-    page_text = get_page_text(catalog_url)
+    page_text = get_text(catalog_url)
     titles, artists, countries, prices, years = get_cd_data(page_text)
     display_catalog(titles, artists, countries, prices, years)
     calculate_avg(prices)
