@@ -2,6 +2,18 @@ import urllib.request
 import re
 
 
+def get_text(url):
+    with urllib.request.urlopen(url) as response:
+        text = response.read()
+    return text
+
+
+def get_tag_values(text, tag_name):
+    tag_regex = re.compile(rf'<{tag_name}>(.+?)</{tag_name}>')
+    tag_values = re.findall(tag_regex, text)
+    return tag_values
+
+
 def extract_cd_data(cd):
     title = re.search(r'<TITLE>(.*?)</TITLE>', cd).group(1)
     artist = re.search(r'<ARTIST>(.*?)</ARTIST>', cd).group(1)
@@ -9,31 +21,6 @@ def extract_cd_data(cd):
     price = float(re.search(r'<PRICE>(.*?)</PRICE>', cd).group(1))
     year = int(re.search(r'<YEAR>(.*?)</YEAR>', cd).group(1))
     return title, artist, country, price, year
-
-
-def read_catalog(url):
-    response = urllib.request.urlopen(url)
-    if response.status != 200:
-        print(f"Failed to retrieve data from {url}")
-        return None
-    else:
-        titles = []
-        artists = []
-        countries = []
-        prices = []
-        years = []
-        cd_regex = re.compile(r'<CD>(.*?)</CD>', re.DOTALL)
-        cds = re.findall(cd_regex, response.read().decode())
-
-        for cd in cds:
-            cd_data = extract_cd_data(cd)
-            title, artist, country, price, year = cd_data
-            titles.append(title)
-            artists.append(artist)
-            countries.append(country)
-            prices.append(price)
-            years.append(year)
-        return titles, artists, countries, prices, years
 
 
 def calculate_avg(titles, prices):
