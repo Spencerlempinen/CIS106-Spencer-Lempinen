@@ -57,7 +57,7 @@ def display_catalog(titles, artists, countries, prices, years):
 
 
 def main():
-    catalog_url = "https://www.w3schools.com/xml/plant_catalog.xml"
+    catalog_url = "https://www.w3schools.com/xml/cd_catalog.xml"
     titles, artists, countries, prices, years = read_catalog(catalog_url)
     display_catalog(titles, artists, countries, prices, years)
     calculate_avg(titles, prices)
