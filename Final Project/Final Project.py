@@ -3,7 +3,7 @@
 # https://www.youtube.com/shorts/LjXBaYCvlhY
 # https://www.youtube.com/watch?v=tlHNS-UTRIM&t=756s&ab_channel=NeuralNine
 # Nick Rich(friend who does cloud security with CDW) :helped with the get_page_text function
-#co-pilot
+# co-pilot
 
 
 import urllib.request
