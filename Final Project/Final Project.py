@@ -53,7 +53,8 @@ def calculate_avg(prices):
         return print(f"{num_items} items - ${avg_price:.2f} average price")
 
 
-def display_catalog(titles, artists, countries, prices, years, num_items_to_display=None):
+def display_catalog(titles, artists, countries, prices,
+                    years, num_items_to_display=None):
     num_items = len(titles)
     if num_items == 0:
         return ValueError("Error: missing or incorrect data")
@@ -61,7 +62,8 @@ def display_catalog(titles, artists, countries, prices, years, num_items_to_disp
         num_items = num_items_to_display
     print("title - artist - country - price - year")
     for i in range(num_items):
-        print(f"{titles[i]} - {artists[i]} - {countries[i]} - ${prices[i]:.2f} - {years[i]}")
+        print(f"{titles[i]} - {artists[i]} - "
+              f"{countries[i]} - ${prices[i]:.2f} - {years[i]}")
 
 
 def main():
