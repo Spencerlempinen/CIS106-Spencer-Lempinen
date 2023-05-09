@@ -1,8 +1,8 @@
 # References:
-# https://www.youtube.com/watch?v=sL64l9Aavpg&ab_channel=AVK47Python
+# https://tinyurl.com/k2jw4xrw
 # https://www.youtube.com/shorts/LjXBaYCvlhY
-# https://www.youtube.com/watch?v=tlHNS-UTRIM&t=756s&ab_channel=NeuralNine
-# Nick Rich(friend who does cloud security with CDW) :helped with the get_page_text function
+# https://tinyurl.com/y5jz4fvw
+# Nick Rich(does cloud security with CDW): helped w/ the get_page_text
 # co-pilot
 
 
