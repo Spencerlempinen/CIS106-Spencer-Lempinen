@@ -1,3 +1,5 @@
+# This program reads an XML file with a CD catalog in it
+# and returns a parsed version with the amount of items and avg price
 # References:
 # https://tinyurl.com/k2jw4xrw
 # https://www.youtube.com/shorts/LjXBaYCvlhY
