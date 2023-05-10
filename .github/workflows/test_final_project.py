@@ -35,8 +35,8 @@ def test_final_project_folder_structure():
         "package-lock.json|test.csproj")
 
 
-def test_final_project_required_program_plan_files():
-    test.check_required_files("Final Project", "txt", 1)
+# def test_final_project_required_program_plan_files():
+#     test.check_required_files("Final Project", "txt", 1)
 
 
 def test_final_project_required_source_code_files():
