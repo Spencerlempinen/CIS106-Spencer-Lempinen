@@ -1,3 +1,6 @@
+# This program will process and XMl file from a URL and parse it,
+# and return the average price and the list of CDS
+
 # References:
 # https://www.youtube.com/watch?v=sL64l9Aavpg&ab_channel=AVK47Python
 # https://www.youtube.com/shorts/LjXBaYCvlhY
