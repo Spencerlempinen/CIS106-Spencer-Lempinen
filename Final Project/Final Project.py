@@ -1,9 +1,8 @@
-# This program reads an XML file with a CD catalog in it
-# and returns a parsed version with the amount of items and avg price
 # References:
-# https://tinyurl.com/k2jw4xrw
+# https://www.youtube.com/watch?v=sL64l9Aavpg&ab_channel=AVK47Python
 # https://www.youtube.com/shorts/LjXBaYCvlhY
-# https://tinyurl.com/y5jz4fvw
+# https://www.youtube.com/watch?v=tlHNS-UTRIM&t=756s&ab_channel=NeuralNine
+# https://www.youtube.com/watch?v=K8L6KVGG-7o&ab_channel=CoreySchafer
 # Nick Rich(does cloud security with CDW): helped w/ the get_page_text
 # co-pilot
 
@@ -36,13 +35,29 @@ def get_tag_values(text, tag):
     return tag_values
 
 
-def get_cd_data(page_text):
+def get_cd_data_titles(page_text):
     titles = get_tag_values(page_text, "TITLE")
+    return titles
+
+
+def get_cd_data_artists(page_text):
     artists = get_tag_values(page_text, "ARTIST")
+    return artists
+
+
+def get_cd_data_countries(page_text):
     countries = get_tag_values(page_text, "COUNTRY")
+    return countries
+
+
+def get_cd_data_prices(page_text):
     prices = [float(p) for p in get_tag_values(page_text, "PRICE")]
+    return prices
+
+
+def get_cd_data_years(page_text):
     years = [int(y) for y in get_tag_values(page_text, "YEAR")]
-    return titles, artists, countries, prices, years
+    return years
 
 
 def calculate_avg(prices):
@@ -71,7 +86,11 @@ def display_catalog(titles, artists, countries, prices,
 def main():
     catalog_url = "https://www.w3schools.com/xml/cd_catalog.xml"
     page_text = get_text(catalog_url)
-    titles, artists, countries, prices, years = get_cd_data(page_text)
+    titles = get_cd_data_titles(page_text)
+    artists = get_cd_data_artists(page_text)
+    countries = get_cd_data_countries(page_text)
+    prices = get_cd_data_prices(page_text)
+    years = get_cd_data_years(page_text)
     display_catalog(titles, artists, countries, prices, years)
     calculate_avg(prices)
 
