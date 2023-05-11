@@ -1,0 +1,101 @@
+This program will process and XMl file from a URL and parse it to return the average price and the list of CDS
+
+Main Program
+    Open Url
+    extract and parse CD data
+    assign titles
+    assign artists
+    assign countries
+    assign prices
+    assign years
+    calculate the average price
+    return the parsed CD data with average price
+get text
+    Parameters:
+        url
+    Process:
+        try opeing the url
+            decode with utf-8
+            return text
+        handle exceptions    
+    Return Value:
+        text
+
+get tag values
+    Parameters:
+        text, tag
+    Process:
+        create regex pattern
+        find all matches and store as tag values
+        if no matches
+            error
+       create tage value list
+       for every match
+            check for missing data
+            if no mssing data then strip whitespace
+    Return Value:
+        return tag values
+
+get titles
+    Parameters:
+        page text
+    Process:
+        assign tag value title to titles
+    Return Value:
+        titles
+
+get artists
+    Parameters:
+        page text
+    Process:
+        assign tag value artist to artist
+    Return Value:
+        artists
+
+get countries
+    Parameters:
+        page text
+    Process:
+        assign tag value country to countries
+    Return Value:
+        countries
+        
+get prices
+    Parameters:
+        page text
+    Process:
+        assign tag value price to prices
+    Return Value:
+        prices
+
+get years
+    Parameters:
+        page text
+    Process:
+        assign tag value year to years
+    Return Value:
+        years
+        
+calculate average
+    Parameters:
+        prices
+    Process:
+        for every price in the price list, store as number of items
+        if there are no prices
+            return missing or bad data
+        else
+            store the sum of all prices as the total price
+            total price divided by the number of items is the average price
+    Return Value:
+        print the number of items and the average price
+        
+display catalog
+    Parameters:
+        titles, artists, countries, prices, years 
+    Process:
+        store value of number of titles as number of items
+            if no items call value error
+        print CD catalog header
+        print titles - artists - countries - prices - years
+    Return Value:
+        return tag values
