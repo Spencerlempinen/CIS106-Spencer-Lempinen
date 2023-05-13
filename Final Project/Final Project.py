@@ -14,7 +14,8 @@ import urllib.request
 import re
 
 # I added this module becuase im currently out of town working on my MacBook 
-# this was the only way I could get the code I was working on to output anything im not sure why but this made it work
+# this was the only way I could get the code I was working on to output anything 
+# Im not sure why but this made it work
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
