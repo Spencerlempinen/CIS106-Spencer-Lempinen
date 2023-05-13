@@ -13,16 +13,30 @@
 import urllib.request
 import re
 
+# I added this module becuase im currently out of town working on my MacBook 
+# this was the only way I could get the code I was working on to output anything im not sure why but this made it work
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+
+
 
 def get_text(url):
     try:
         with urllib.request.urlopen(url) as response:
+            content_type = response.headers.get('Content-Type', '')
+            if 'xml' not in content_type:
+                raise ValueError(f"Error: {url} does not contain an XML file")
             text = response.read().decode('utf-8')
             if not text:
-                return ValueError("Error: file missing")
+                raise ValueError("Error: file is empty")
             return text
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            raise ValueError(f"Error 404: File not found at {url}")
+        else:
+            raise ValueError(f"Failed to retrieve data from {url}: {e}")
     except urllib.error.URLError as e:
-        return ValueError(f"Failed to retrieve data from {url}: {e}")
+        raise ValueError(f"Failed to retrieve data from {url}: {e}")
 
 
 def get_tag_values(text, tag):
