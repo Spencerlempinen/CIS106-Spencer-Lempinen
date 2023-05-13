@@ -100,15 +100,18 @@ def display_catalog(titles, artists, countries, prices, years):
 
 
 def main():
-    catalog_url = "https://www.w3schools.com/xml/cd_catalog.xml"
-    page_text = get_text(catalog_url)
-    titles = get_cd_data_titles(page_text)
-    artists = get_cd_data_artists(page_text)
-    countries = get_cd_data_countries(page_text)
-    prices = get_cd_data_prices(page_text)
-    years = get_cd_data_years(page_text)
-    display_catalog(titles, artists, countries, prices, years)
-    calculate_avg(prices)
+    try:
+        catalog_url = "https://www.w3schools.com/xml/cd_catalog.xml"
+        page_text = get_text(catalog_url)
+        titles = get_cd_data_titles(page_text)
+        artists = get_cd_data_artists(page_text)
+        countries = get_cd_data_countries(page_text)
+        prices = get_cd_data_prices(page_text)
+        years = get_cd_data_years(page_text)
+        display_catalog(titles, artists, countries, prices, years)
+        calculate_avg(prices)
+    except Exception as e:
+        print(e)
 
 
 main()
